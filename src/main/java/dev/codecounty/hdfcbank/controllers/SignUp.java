@@ -2,8 +2,8 @@ package dev.codecounty.hdfcbank.controllers;
 
 import dev.codecounty.hdfcbank.models.LoginResult;
 import dev.codecounty.hdfcbank.models.User;
-import dev.codecounty.hdfcbank.service.BankService;
 import dev.codecounty.hdfcbank.service.BankServiceImpl;
+import dev.codecounty.hdfcbank.service.BankService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @Log
-@WebServlet("/SignUp")
+@WebServlet("/signup")
 public class SignUp extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
