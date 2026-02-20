@@ -1,75 +1,46 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | AceBank</title>
-
-
+    <title>Ace Bank</title>
 
 </head>
 
 <body >
-<div>
-
+<div >
     <header>
         <div >
-            <h1 \>Ace<span>Bank</span></h1>
+            <h1 >Ace<span>Bank</span></h1>
         </div>
 
-        <div class="header-actions">
-
-
-
-            <nav>
-                <ul>
-                    <li><a href="index.jsp">Home</a></li>
-                    <li><a href="sign-up.jsp">Join Now</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="${pageContext.request.contextPath}/login.jsp">Login</a></li>
+                <li><a href="${pageContext.request.contextPath}/sign-up.jsp" class="btn-primary">Sign Up</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main >
-        <div >
-            <h2>Welcome Back</h2>
-            <p>Enter your credentials to access your account.</p>
-        </div>
-
-        <form action="Login" method="POST">
-            <div >
-                <label for="accNo">Account Number</label>
-                <input type="text" id="accNo" name="accountNumber"
-                       required
-                       placeholder="Enter Account Number">
-            </div>
+    <main>
+        <section >
+            <span>Trusted by 2M+ Users</span>
+            <h1>Banking Made <span class="highlight">Easy</span></h1>
+            <p>Join over 40,000 people who open an Ace Bank account every week. Manage, spend, and save your money with
+                ease.</p>
 
             <div >
-                <label for="pass">Password</label>
-                <input type="password" id="pass" name="password"
-                       required placeholder="••••••••">
+                <a href="${pageContext.request.contextPath}/sign-up.jsp" class="btn-primary">Open Account</a>
+                <a href="#features" class="btn-secondary">View Features <i class="ri-arrow-right-line"></i></a>
             </div>
+        </section>
 
-            <div >
-                <div>
-                    <input type="checkbox" name="rememberMe" id="remember">
-                    <label for="remember">Remember Me</label>
-                </div>
-                <a href="ForgotPassword.jsp" >Forgot Password?</a>
-            </div>
-
-            <button type="submit" >Login to Account</button>
-        </form>
-
-        <p >
-            New to Ace Bank? <a href="sign-up.jsp">Create an account</a>
-        </p>
+        <figure>
+            <img src="${pageContext.request.contextPath}/assets/images/bank_hero.svg" alt="Ace Bank Illustration">
+        </figure>
     </main>
 </div>
-
 
 
 </body>

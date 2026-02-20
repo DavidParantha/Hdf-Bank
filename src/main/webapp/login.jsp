@@ -1,53 +1,76 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Hemant
-  Date: 20-02-2026
-  Time: 10:21
-  To change this template use File | Settings | File Templates.
---%><%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ace Bank</title>
+    <title>Login | AceBank</title>
+
+
 
 </head>
 
 <body >
-<div >
+<div>
+
     <header>
         <div >
-            <h1 >Ace<span>Bank</span></h1>
+            <h1 \>HDFC<span>Bank</span></h1>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/login.jsp">Login</a></li>
-                <li><a href="${pageContext.request.contextPath}/sign-up.jsp" class="btn-primary">Sign Up</a></li>
-            </ul>
-        </nav>
+        <div class="header-actions">
+
+
+
+            <nav>
+                <ul>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="sign-up.jsp">Join Now</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section >
-            <span>Trusted by 2M+ Users</span>
-            <h1>Banking Made <span class="highlight">Easy</span></h1>
-            <p>Join over 40,000 people who open an Ace Bank account every week. Manage, spend, and save your money with
-                ease.</p>
+    <main >
+        <div >
+            <h2>Welcome Back</h2>
+            <p>Enter your credentials to access your account.</p>
+        </div>
+
+        <form action="Login" method="POST">
+            <div >
+                <label for="accNo">Account Number</label>
+                <input type="text" id="accNo" name="accountNumber"
+                       required
+                       placeholder="Enter Account Number">
+            </div>
 
             <div >
-                <a href="${pageContext.request.contextPath}/sign-up.jsp" class="btn-primary">Open Account</a>
-                <a href="#features" class="btn-secondary">View Features <i class="ri-arrow-right-line"></i></a>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password"
+                       required placeholder="••••••••">
             </div>
-        </section>
 
-        <figure>
-            <img src="${pageContext.request.contextPath}/assets/images/bank_hero.svg" alt="Ace Bank Illustration">
-        </figure>
+            <div >
+                <div>
+                    <input type="checkbox" name="rememberMe" id="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <a href="ForgotPassword.jsp" >Forgot Password?</a>
+            </div>
+
+            <button type="submit" >Login to Account</button>
+        </form>
+
+        <p >
+            New to  HDFC Bank? <a href="sign-up.jsp">Create an account</a>
+        </p>
     </main>
 </div>
 
 
+
 </body>
 </html>
+
